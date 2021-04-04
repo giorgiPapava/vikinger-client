@@ -12,23 +12,23 @@ import {
 export default function WelcomeScreen(): ReactElement {
   return (
     <Box>
-      <PreTitle variant='h2'>Welcome to</PreTitle>
-      <Title variant='h1'>Vikinger</Title>
+      <PreTitle variant="h2">Welcome to</PreTitle>
+      <Title variant="h1">Vikinger</Title>
       <Description>
         The next generation social network & community! Connect with your
         friends and play with our quests and badges gamification system!
       </Description>
       <SwitchGroup>
         <StyledSwitchLabel
-          value='login'
-          checked={true}
+          value="login"
+          checked
           control={<StyledSwitch />}
-          label='Login'
+          label="Login"
         />
         <StyledSwitchLabel
-          value='register'
+          value="register"
           control={<StyledSwitch />}
-          label='Register'
+          label="Register"
         />
       </SwitchGroup>
     </Box>

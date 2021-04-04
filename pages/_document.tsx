@@ -15,7 +15,6 @@ interface ReturnType {
   head?: JSX.Element[]
 }
 
-// eslint-disable-next-line fp/no-class
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<ReturnType> {
     const styledComponentsSheet = new ServerStyleSheet()
@@ -23,12 +22,12 @@ class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage
 
     try {
-      // eslint-disable-next-line fp/no-mutation
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
             styledComponentsSheet.collectStyles(
-              materialSheets.collect(<App {...props} />)
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              materialSheets.collect(<App {...props} />),
             ),
         })
       const initialProps = await Document.getInitialProps(ctx)
@@ -49,23 +48,23 @@ class MyDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang='en' dir='ltr'>
+      <Html lang="en" dir="ltr">
         <Head>
-          <meta charSet='utf-8' />
+          <meta charSet="utf-8" />
           {/* PWA primary color */}
-          <meta name='theme-color' content={theme.palette.primary.main} />
+          <meta name="theme-color" content={theme.palette.primary.main} />
           <link
-            rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           <link
-            href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap'
-            rel='stylesheet'
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap"
+            rel="stylesheet"
           />
-          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
-            rel='stylesheet'
+            href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <body>

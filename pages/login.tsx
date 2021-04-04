@@ -13,11 +13,11 @@ export default function Login(): ReactElement {
       <LandingWrapper>
         <BackgroundImage>
           <Image
-            src='/landing-background.jpg'
-            layout='fill'
-            alt='background'
-            objectFit='cover'
-            objectPosition='center'
+            src="/landing-background.jpg"
+            layout="fill"
+            alt="background"
+            objectFit="cover"
+            objectPosition="center"
           />
         </BackgroundImage>
         <WelcomeScreen />
