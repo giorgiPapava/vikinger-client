@@ -8,7 +8,7 @@ const theme = createMuiTheme({
       textTransform: 'none',
       fontWeight: 700,
     },
-    fontFamily: `Rajdhani, sans-serif`,
+    fontFamily: 'Rajdhani, sans-serif',
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,

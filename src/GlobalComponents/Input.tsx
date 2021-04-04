@@ -12,5 +12,6 @@ const StyledInput = styled(TextField)`
 `
 
 export default function Input({ ...props }: TextFieldProps): ReactElement {
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <StyledInput {...props} />
 }

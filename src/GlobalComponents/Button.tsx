@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { ReactElement } from 'react'
 import { Button as MuiButton, ButtonProps } from '@material-ui/core'
 import styled from 'styled-components'
@@ -28,5 +29,6 @@ StyledButton.defaultProps = {
 }
 
 export default function Button({ children, ...props }: Props): ReactElement {
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <StyledButton {...props}>{children}</StyledButton>
 }
