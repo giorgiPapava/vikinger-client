@@ -3,24 +3,24 @@ import { red } from '@material-ui/core/colors'
 
 // Create a theme instance.
 const theme = createMuiTheme({
-  themeType: 'main',
+  themeType: 'dark',
   palette: {
     primary: {
-      main: '#6EC1E4',
+      main: '#40d04f',
     },
     secondary: {
-      main: '#615dfa',
-      hover: '#5753e4',
+      main: '#7750f8',
+      hover: '#9668ff',
     },
     box: {
-      main: '#ffffff',
-      border: '#dedeea',
-      text: '#ffffff',
-      checkedText: '#3e3f5e',
+      main: '#1d2333',
+      border: '#3f485f',
+      text: '#3e3f5e',
+      secondaryText: '#ffffff',
     },
     submitButton: {
-      main: '#23d2e2',
-      hover: '#1bc5d4',
+      main: '#40d04f',
+      hover: '#4ae95b',
     },
     error: {
       main: red.A400,

@@ -1,28 +1,7 @@
 import { ReactElement } from 'react'
-import LoginForm from '@src/components/LoginForm'
-import {
-  BackgroundImage,
-  LandingWrapper,
-} from '@src/components/LoginForm/components'
-import WelcomeScreen from '@src/components/WelcomeScreen'
-import Image from 'next/image'
+
+import Landing from '@src/components/Landing'
 
 export default function Login(): ReactElement {
-  return (
-    <>
-      <LandingWrapper>
-        <BackgroundImage>
-          <Image
-            src="/landing-background.jpg"
-            layout="fill"
-            alt="background"
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </BackgroundImage>
-        <WelcomeScreen />
-        <LoginForm />
-      </LandingWrapper>
-    </>
-  )
+  return <Landing />
 }

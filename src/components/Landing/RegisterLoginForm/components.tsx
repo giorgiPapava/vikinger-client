@@ -2,6 +2,7 @@ import {
   Box,
   Checkbox as MuiCheckbox,
   FormControl,
+  FormControlLabel,
   Typography,
 } from '@material-ui/core'
 import styled from 'styled-components'
@@ -13,32 +14,38 @@ export const LandingWrapper = styled(Box)`
   height: 100vh;
 `
 
-export const LoginWrapper = styled(Box)`
-  background-color: white;
+export const RegisterLoginWrapper = styled(Box)`
+  background-color: ${(props) => props.theme.palette.box.main};
   width: 30.25rem;
   border-radius: 12px;
   padding: 3rem 4rem;
   position: relative;
 `
 
-export const LoginText = styled(Typography)`
+export const LoginRegisterText = styled(Typography)`
+  color: ${(props) => props.theme.palette.box.secondaryText};
   font-size: 1.625rem;
   font-weight: 700;
   text-align: center;
 `
 
-export const InputsWrapper = styled(Box)`
+export const InputsWrapper = styled(Box)<{ islogin: string }>`
   display: flex;
-  gap: 1.75rem;
+  gap: 1.25rem;
   flex-direction: column;
+  margin-bottom: ${(props) => props.islogin === 'false' && '2rem'};
+`
+export const CheckboxLabel = styled(FormControlLabel)`
+  color: ${({ theme }) => theme.palette.box.secondaryText};
 `
 
 export const Form = styled(FormControl)`
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 `
 
 export const Checkbox = styled(MuiCheckbox)`
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+  color: ${({ theme }) => theme.palette.box.border};
 `
 
 export const RocketImageWrapper = styled(Box)`

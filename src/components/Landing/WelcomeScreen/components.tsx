@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import styled from 'styled-components'
 import {
   Typography,
@@ -40,15 +41,17 @@ export const SwitchGroup = styled(FormGroup)`
 export const StyledSwitchLabel = styled(FormControlLabel)`
   width: 11.25rem;
   height: 3.375rem;
-  border: 1px solid white;
+  border: ${(props) => `1px solid ${props.theme.palette.box.main}`};
   margin: 0;
-  background: ${(props) => (props.checked ? 'white' : 'transparent')};
+  background: ${({ checked, theme }) =>
+    checked ? theme.palette.box.main : 'transparent'};
 
   & .MuiFormControlLabel-label {
     font-weight: 700;
     text-align: center;
     width: 100%;
-    color: ${(props) => (props.checked ? '#3e3f5e' : 'white')};
+    color: ${({ checked, theme }) =>
+      checked ? theme.palette.box.secondaryText : theme.palette.box.text};
   }
 
   &:first-child {

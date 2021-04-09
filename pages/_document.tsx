@@ -9,10 +9,10 @@ import { ServerStyleSheet } from 'styled-components'
 import { ServerStyleSheets } from '@material-ui/styles'
 import theme from '../src/theme'
 
-interface ReturnType {
+type ReturnType = {
   styles: JSX.Element
   html: string
-  head?: JSX.Element[]
+  head?: (JSX.Element | null)[]
 }
 
 class MyDocument extends Document {
